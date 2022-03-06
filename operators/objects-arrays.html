@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>objects js</title>
+</head>
+<body>
+    <h1>objects in js</h1>
+    <script>
+        let var1 = 22;
+        console.log(typeof(var1));
+        let var2 = "Juan";
+        let var3 = 4.60;
+        let var4 = false;
+        let var5;
+        let var6 = undefined;
+        let var7 = null;
+
+        //create my own objects
+        let student= {
+            name: "Peter",
+            rollNo: 567,
+            age: 23
+        };
+        console.log(student);
+        console.log(student['name']);
+        const {rollNo, age} = student;
+        console.log(rollNo);
+        console.log(age);
+    </script>
+</body>
+</html>

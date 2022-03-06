@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>interactivity</title>
+</head>
+<body>
+    <script>
+        function add(){
+            let num1 = prompt("Enter the value of 1st number");
+            num1 = parseInt(num1);
+            let num2 = prompt("Enter the value of 2nd number");
+            num2 = parseInt(num2);
+            let result = num1+num2;
+            alert("Result is " + result ); 
+        }
+        //add();
+        function deleteCart(){
+            //confirm will help user to decide on an action
+            let input = confirm ("Are you sure you want tpo delete the card");
+            if (input){
+                alert("Cart has been deleted");
+                } else {
+                    alert ("Cannot delete");
+                }
+
+            }
+        deleteCart();
+         
+    </script>
+</body>
+</html>

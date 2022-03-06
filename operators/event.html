@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event in js</title>
+</head>
+<body>
+    <div id="header" class="layout">
+        <h2 id="headerText"  onmouseover="changeColor()"  onmouseout="changeColor()">Header section</h2>
+        <input id="headerTextinput" type="text" placeholder="headerText"/>
+        <button id="headerbtn" onclick="changeText()">change color</button>
+    </div>
+    <div id="main" class="layout">
+       <section id="left"></section>
+
+       <ul class="left-menu">
+           <li>Products</li>
+           <li>Categories</li>
+           <li>Orders</li>
+
+       </ul> 
+       <section id="center"></section>
+       <h3 id="sometext">Hello world</h3>
+       <input  id="fullName" type="text" placeholder="Full Name" value="Jhon doe"/>
+
+       <section id="right"></section>
+       <p>lorem ipsum kkkkk</p>
+
+    </div>
+    <div id="footer" class="layout">
+        All rights reserved
+
+    </div>
+    <script>
+        function changeColor(){
+           // alert("te amo anorio");
+            let ht= document.getElementById('headerText');
+            if (  ht.style.color !=='red'){
+                ht.style.color= 'red'; }
+                else{
+                    ht.style.color= 'black';
+               
+            }
+            ht.style.color = 'red';
+        }
+        let fn = document.getElementById('fullName');
+        fn.addEventListener('change', function test(){
+            alert(fn.value);
+            document.getElementById('sometext').innerText = fn.value;
+
+        });
+
+
+
+        function changeText(){
+            let ht = document.getElementById('headerText');
+            let hti = document.getElementById('headerTextinput');
+            ht.innerHTML = hti.value;
+            ht.style.fontSize= '30px';
+            hti.value= '';
+        }
+    </script>
+</body>
+</html>

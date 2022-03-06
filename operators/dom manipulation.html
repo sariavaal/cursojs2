@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom manipulation</title>
+</head>
+<body>
+    <div id="header" class="layout">
+        <h2>Header section</h2>
+    </div>
+    <div id="main" class="layout">
+       <section id="left"></section>
+
+       <ul class="left-menu">
+           <li>Products</li>
+           <li>Categories</li>
+           <li>Orders</li>
+
+       </ul> 
+       <section id="center"></section>
+       <h3>Hello world</h3>
+       <input id="fullName" type="text" placeholder="Full Name" value="Jhon doe"/>
+       <section id="right"></section>
+       <p>lorem ipsum</p>
+
+    </div>
+    <div id="footer" class="layout">
+        All rights reserved
+
+    </div>
+    <script>
+        let mainElement = document.getElementById('main');
+        console.log(mainElement);
+        let layoutElements = document.getElementsByClassName('layout');
+        console.log(layoutElements);
+        let tagElement = document.getElementsByTagName('li');
+        console.log(tagElement[2]);
+        console.log(tagElement[2].innerHTML);
+        tagElement[2].innerHTML = "MyOrders";
+        let fullName= document.getElementById("fullName");
+        console.log(fullName.value);
+
+        //let selectorQuery = document.querySelector('section');// returns the first mention matching
+       // console.log(selectorQuery);
+      // let selectorQuery = document.querySelector('.layout');// returns the first mention matching
+       // console.log(selectorQuery);
+      // let selectorQuery = document.querySelector('#left');// returns the first mention matching
+       // console.log(selectorQuery);
+        let selectorQuery = document.querySelectorAll('#left > .left-menu > li');// returns the first mention matching
+       console.log(selectorQuery);
+       selectorQuery[1].style.color = 'red';
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var contactos = [
+            {
+                "nombre": "nora",
+                "apellido": "nav",
+                "gustos": ["pizza","programación"]
+            },
+            {
+                "nombre": "harry",
+                "apellido": "potter",
+                "gustos": ["hogwarts","magia"]
+            },
+            {
+                "nombre": "sherlock",
+                "apellido": "holmes",
+                "numero": "012455",
+                "gustos": ["casos","violin"]
+            },
+        ];
+        
+        function buscarPerfil(nombre, propiedad){
+            for (var i = 0; i< contactos.length; i++){
+                if (contactos[i].nombre=== nombre){
+                    return contactos[i][propiedad] || "La propiedad no existe";
+                }
+
+            }
+            return "El contacto no esta en la lista";
+        }
+        console.log(buscarPerfil("nora", "gustos"));
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var misPlantas = [
+    {
+        tipo : "flores",
+        lista : [
+            "rosas",
+            "tulipanes",
+            "dientes de leon"
+        ]
+    },
+    {
+        tipo: "arboles",
+        lista:[
+            "abeto",
+            "pino",
+            "abedul"
+        ]
+    }
+];
+var coleccionDeDiscos = {
+    7853: {
+       
+        titulo: "bee gees greatest",
+        artista : "bee gees",
+        canciones:  ["xd", "xdd" ]
+}
+    }
+function actualizarDiscos(discos, id, propiedad, valor){
+    if (valor==""){
+        delete discos[id][propiedad];
+    }else if(propiedad === "canciones"){
+        discos[id][propiedad] = discos[id][propiedad] || [];
+        discos[id][propiedad].push(valor);
+    }
+}
+//var primeraFlor = misPlantas[0].lista[0];
+//var segundArbol = misPlantas[1].lista[1];
+//console.log(primeraFlor);
+//console.log(segundArbol);
+actualizarDiscos(coleccionDeDiscos, 7853, "titulodelalbum", "");
+console.log(coleccionDeDiscos[7853].titulodelalbum);
+    </script>
+</body>
+</html>

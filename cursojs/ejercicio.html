@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function puntajeDeGolf (par,golpes){
+            if(golpes==1){
+                console.log("Hole-in-one")
+            }
+            else if(golpes <= par - 2){
+               return "Eagle";
+            }
+            else if (golpes==par - 1){
+                return "Birdie";
+            }
+            else if (golpes== par){
+                return "Par";
+            }
+            else if(golpes == par - 1){
+                return "Boguey";
+            }
+            else if (golpes == par + 2){
+                return "Doble bogey";
+            }
+            else if( golpes >= par + 3){
+                return "Go home";
+            }
+        }
+        console.log(puntajeDeGolf(4,3));
+    </script>
+</body>
+</html>

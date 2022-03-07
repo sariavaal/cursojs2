@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Default switch</title>
+</head>
+<body>
+    <script>
+        function seleccionarIdioma(valor){
+            var idioma;
+            switch (valor){
+                case 1: 
+                idioma = "Español";
+                break;
+                case 2:
+                    idioma= "Frances";
+                case 3:
+                    idioma = "portuges";
+                    break;
+                default:
+                    idioma = "Ingles";
+                    break;
+                case 4:
+                case 5:
+                    idioma = "Anorio";
+                    break;
+            }
+            return idioma;
+        }
+        console.log(seleccionarIdioma(6));
+    </script>
+</body>
+</html>
